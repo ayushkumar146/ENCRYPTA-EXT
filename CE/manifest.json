@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+  "name": "Encrypta",
+  "version": "1.0.1",
+  "description": "autofiller",
+  "background":{
+    "service_worker":"hw/bg.js"
+  },
+  "action":{
+    "default_popup":"ext/index.html"
+  },
+  "content_scripts":[
+    {
+        "matches":["<all_urls>"],
+        "js":["ct.js"]
+    }
+  ],
+  "permissions":["storage","activeTab","declarativeContent","https://demo.extension.encrypta.in","http://demo.extension.encrypta.in/GetDetails"]
+}
